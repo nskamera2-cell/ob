@@ -1,0 +1,10 @@
+<!doctype html><html lang="uz"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Obsidian'da ochish</title><style>body{font-family:-apple-system,system-ui,sans-serif;background:#1e1e1e;color:#eee;display:flex;min-height:100vh;align-items:center;justify-content:center;margin:0;padding:16px}a{color:#a78bfa;font-size:20px}</style></head>
+<body><div><p id="m">Obsidian ochilmoqda…</p><p><a id="h" href="#">Ochilmasa shu yerni bosing</a></p></div>
+<script>
+// Panda: Telegram obsidian:// havolasini bosiladigan qilmaydi. Bu sahifa faqat yo'naltiradi, hech qanday ma'lumot saqlamaydi.
+const p=new URLSearchParams(location.search), v=p.get('v')||'', f=p.get('f')||'';
+const u='obsidian://open?vault='+encodeURIComponent(v)+(f?'&file='+encodeURIComponent(f):'');
+document.getElementById('h').href=u;
+if(v){location.replace(u)}else{document.getElementById('m').textContent="Havola to'liq emas."}
+</script></body></html>
